@@ -7,7 +7,7 @@
 
 import Foundation
 extension Encodable {
-    func toJson(excluding keys: [String] = []) -> [String: Any] {
+    func toJson(excluding keys: [String] = []) throws -> [String: Any] {
     guard let objectData = try? JSONEncoder().encode(self) else {return [:]}
         guard var json = try? JSONSerialization.jsonObject(with: objectData, options: []) as? [String: Any] else {return [:]}
         for key in keys {

@@ -14,8 +14,8 @@
 		5215458525FD0CDA0008A30F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5215458425FD0CDA0008A30F /* User.swift */; };
 		5215458825FD164A0008A30F /* extenstion+documentFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5215458725FD164A0008A30F /* extenstion+documentFirestore.swift */; };
 		52C873CC25FCFC29005BCCCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C873CB25FCFC29005BCCCB /* AppDelegate.swift */; };
-		52C873D025FCFC29005BCCCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C873CF25FCFC29005BCCCB /* ViewController.swift */; };
-		52C873D325FCFC29005BCCCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C873D125FCFC29005BCCCB /* Main.storyboard */; };
+		52C873D025FCFC29005BCCCB /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C873CF25FCFC29005BCCCB /* UsersViewController.swift */; };
+		52C873D325FCFC29005BCCCB /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C873D125FCFC29005BCCCB /* Users.storyboard */; };
 		52C873D525FCFC2B005BCCCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C873D425FCFC2B005BCCCB /* Assets.xcassets */; };
 		52C873D825FCFC2B005BCCCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C873D625FCFC2B005BCCCB /* LaunchScreen.storyboard */; };
 		9E1C1B5F770585803300F00E /* Pods_FireStoreLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D511BD46CC140A052277E4 /* Pods_FireStoreLayer.framework */; };
@@ -32,8 +32,8 @@
 		5215458725FD164A0008A30F /* extenstion+documentFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extenstion+documentFirestore.swift"; sourceTree = "<group>"; };
 		52C873C825FCFC29005BCCCB /* FireStoreLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireStoreLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C873CB25FCFC29005BCCCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52C873CF25FCFC29005BCCCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		52C873D225FCFC29005BCCCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52C873CF25FCFC29005BCCCB /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		52C873D225FCFC29005BCCCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Users.storyboard; sourceTree = "<group>"; };
 		52C873D425FCFC2B005BCCCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52C873D725FCFC2B005BCCCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52C873D925FCFC2B005BCCCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +70,66 @@
 			path = FireStoreLayer;
 			sourceTree = "<group>";
 		};
+		5215458B25FD32250008A30F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5215458425FD0CDA0008A30F /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5215458C25FD32360008A30F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				52C873CB25FCFC29005BCCCB /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5215458D25FD32410008A30F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				52C873D925FCFC2B005BCCCB /* Info.plist */,
+				5215457D25FD06830008A30F /* GoogleService-Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		5215458F25FD327E0008A30F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52C873D425FCFC2B005BCCCB /* Assets.xcassets */,
+				52C873D625FCFC2B005BCCCB /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5215459025FD329B0008A30F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5215458025FD0AA30008A30F /* extenstion+objectToJson.swift */,
+				5215458725FD164A0008A30F /* extenstion+documentFirestore.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5215459125FD32B60008A30F /* Epic */ = {
+			isa = PBXGroup;
+			children = (
+				5215459325FD32F10008A30F /* Users */,
+			);
+			path = Epic;
+			sourceTree = "<group>";
+		};
+		5215459325FD32F10008A30F /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				52C873D125FCFC29005BCCCB /* Users.storyboard */,
+				52C873CF25FCFC29005BCCCB /* UsersViewController.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
 		52C873BF25FCFC29005BCCCB = {
 			isa = PBXGroup;
 			children = (
@@ -91,17 +151,13 @@
 		52C873CA25FCFC29005BCCCB /* FireStoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				5215459025FD329B0008A30F /* Extension */,
+				5215458F25FD327E0008A30F /* Resources */,
+				5215458D25FD32410008A30F /* Configuration */,
+				5215458C25FD32360008A30F /* Core */,
+				5215458B25FD32250008A30F /* Model */,
 				5215458325FD0CB60008A30F /* FireStoreLayer */,
-				52C873CB25FCFC29005BCCCB /* AppDelegate.swift */,
-				52C873CF25FCFC29005BCCCB /* ViewController.swift */,
-				52C873D125FCFC29005BCCCB /* Main.storyboard */,
-				52C873D425FCFC2B005BCCCB /* Assets.xcassets */,
-				52C873D625FCFC2B005BCCCB /* LaunchScreen.storyboard */,
-				52C873D925FCFC2B005BCCCB /* Info.plist */,
-				5215457D25FD06830008A30F /* GoogleService-Info.plist */,
-				5215458025FD0AA30008A30F /* extenstion+objectToJson.swift */,
-				5215458425FD0CDA0008A30F /* User.swift */,
-				5215458725FD164A0008A30F /* extenstion+documentFirestore.swift */,
+				5215459125FD32B60008A30F /* Epic */,
 			);
 			path = FireStoreLayer;
 			sourceTree = "<group>";
@@ -176,7 +232,7 @@
 				52C873D825FCFC2B005BCCCB /* LaunchScreen.storyboard in Resources */,
 				5215457E25FD06830008A30F /* GoogleService-Info.plist in Resources */,
 				52C873D525FCFC2B005BCCCB /* Assets.xcassets in Resources */,
-				52C873D325FCFC29005BCCCB /* Main.storyboard in Resources */,
+				52C873D325FCFC29005BCCCB /* Users.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52C873D025FCFC29005BCCCB /* ViewController.swift in Sources */,
+				52C873D025FCFC29005BCCCB /* UsersViewController.swift in Sources */,
 				52C873CC25FCFC29005BCCCB /* AppDelegate.swift in Sources */,
 				5215458525FD0CDA0008A30F /* User.swift in Sources */,
 				5215458825FD164A0008A30F /* extenstion+documentFirestore.swift in Sources */,
@@ -242,12 +298,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		52C873D125FCFC29005BCCCB /* Main.storyboard */ = {
+		52C873D125FCFC29005BCCCB /* Users.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				52C873D225FCFC29005BCCCB /* Base */,
 			);
-			name = Main.storyboard;
+			name = Users.storyboard;
 			sourceTree = "<group>";
 		};
 		52C873D625FCFC2B005BCCCB /* LaunchScreen.storyboard */ = {
@@ -385,7 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67S6R633P7;
-				INFOPLIST_FILE = FireStoreLayer/Info.plist;
+				INFOPLIST_FILE = FireStoreLayer/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,7 +461,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67S6R633P7;
-				INFOPLIST_FILE = FireStoreLayer/Info.plist;
+				INFOPLIST_FILE = FireStoreLayer/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

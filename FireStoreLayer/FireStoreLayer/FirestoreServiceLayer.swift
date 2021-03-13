@@ -21,8 +21,12 @@ class FirestoreServiceLayer {
     }
     
     func create<T: Encodable>(_ object: T, in collection: FirestoreCollections){
-        let json = object.toJson(excluding: ["id"])
-        ref(to: collection).addDocument(data: json)
+        do {
+            let json = try object.toJson(excluding: ["id"])
+            ref(to: collection).addDocument(data: json)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     func retreve<T: Decodable>(from collection: FirestoreCollections, as type: T.Type, completionHandler: @escaping ([T])-> Void) {
@@ -42,8 +46,12 @@ class FirestoreServiceLayer {
     
     func update<T: Encodable & Identifiable>(_ encodedObject: T,in collection: FirestoreCollections){
         guard let docId = encodedObject.id as? String else {return}
-        let json = encodedObject.toJson(excluding: ["id"])
-        ref(to: collection).document(docId).setData(json)
+        do {
+            let json = try encodedObject.toJson(excluding: ["id"])
+            ref(to: collection).document(docId).setData(json)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     func delete<T: Identifiable>(_ identifiableObject: T, from collection: FirestoreCollections) {
