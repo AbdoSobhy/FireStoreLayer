@@ -86,15 +86,6 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		5215458D25FD32410008A30F /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				52C873D925FCFC2B005BCCCB /* Info.plist */,
-				5215457D25FD06830008A30F /* GoogleService-Info.plist */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
 		5215458F25FD327E0008A30F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +121,14 @@
 			path = Users;
 			sourceTree = "<group>";
 		};
+		5215459525FD3D2B0008A30F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				5215457D25FD06830008A30F /* GoogleService-Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		52C873BF25FCFC29005BCCCB = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +152,8 @@
 			children = (
 				5215459025FD329B0008A30F /* Extension */,
 				5215458F25FD327E0008A30F /* Resources */,
-				5215458D25FD32410008A30F /* Configuration */,
+				52C873D925FCFC2B005BCCCB /* Info.plist */,
+				5215459525FD3D2B0008A30F /* Configuration */,
 				5215458C25FD32360008A30F /* Core */,
 				5215458B25FD32250008A30F /* Model */,
 				5215458325FD0CB60008A30F /* FireStoreLayer */,
