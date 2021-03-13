@@ -124,6 +124,7 @@
 		5215459525FD3D2B0008A30F /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				52C873D925FCFC2B005BCCCB /* Info.plist */,
 				5215457D25FD06830008A30F /* GoogleService-Info.plist */,
 			);
 			path = Configuration;
@@ -152,7 +153,6 @@
 			children = (
 				5215459025FD329B0008A30F /* Extension */,
 				5215458F25FD327E0008A30F /* Resources */,
-				52C873D925FCFC2B005BCCCB /* Info.plist */,
 				5215459525FD3D2B0008A30F /* Configuration */,
 				5215458C25FD32360008A30F /* Core */,
 				5215458B25FD32250008A30F /* Model */,
